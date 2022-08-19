@@ -9,7 +9,7 @@
 
 ### Клонировать репозиторий: ###
 ```shell
-git clone https://github.com/batalova90/meeting_website/
+git clone https://github.com/Andreew19/web-engineering
 ```
 ### Установить виртуальное окружение: ###
 ```shell
