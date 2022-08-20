@@ -44,9 +44,50 @@
         
       </div>
       <div class="wrapper">
-        <h1 class="main-title">Добавить блок</h1>
+
+
+        <div 
+        v-show="!hidden"
+        class="d-flex flex-column justify-space-between align-center">
+    <v-slider
+      v-model="width"
+      class="align-self-stretch"
+      min="200"
+      max="500"
+      step="1"
+    ></v-slider>
+
+    <v-card elevation="20">
+      <v-list-item-title class="text-h5 mb-1">
+          Text
+        </v-list-item-title>
+      <v-img
+      
+      :aspect-ratio="16/9"
+      :width="width"
+      src="https://cdn.vuetifyjs.com/images/parallax/material.jpg"
+    ></v-img>
+    </v-card>
+  </div>
+
+  <v-color-picker
+    dot-size="25"
+    swatches-max-height="200"
+    
+>
+
+  <span>test</span> 
+
+</v-color-picker>
+
+
+
+        <h1 
+       
+        class="main-title">Добавить блок</h1>
         <div class="component-bar d-flex justify-space-around mb-6 ">
             <v-card
+          @click="hidden = !hidden"
           class="card-tool"
           color="#F5F5F5"
           max-width="344"
@@ -104,25 +145,28 @@
     
   </v-card>
 
+
+
+
+
   <v-card
+          
           class="card-tool"
-          color="#F5F5F5"
+          color="#1D1F23"
           max-width="344"
           outlined
           >
+          
     <v-list-item three-line>
       <v-list-item-content>
         <div class="text-overline mb-4">
-          <v-avatar
-              class="avatar-tool"
-              color="primary"
-              size="50"
-          >
+          
             
-          </v-avatar>
+          
         </div>
-        <v-list-item-title class="text-h5 mb-1">
-          Шаблоны
+        <v-list-item-title 
+        class="text-h5 mb-1 text-custom-card">
+          Шаблоны >
         </v-list-item-title>
         
       </v-list-item-content>
@@ -139,6 +183,8 @@
   </v-card>
         </div>
       </div>
+      
+
       
     </v-main>
   </v-app>
@@ -217,6 +263,10 @@ main{
   margin-top: 52px;
 }
 
+.text-custom-card{
+  color: #fff;
+  margin-top: 45px;
+}
 </style>
 
 <script lang="ts">
@@ -227,7 +277,8 @@ export default defineComponent({
 
   data () {
     return {
-      //
+      width: 300,
+      hidden: true,
     }
   },
 })
