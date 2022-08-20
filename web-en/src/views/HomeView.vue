@@ -1,7 +1,14 @@
 <template>
-  <hello-world />
+  
 </template>
 
+<style lang="scss">
+  .info-page-block{
+    margin-top: 30px;
+    height: 30px;
+    background: rgb(122, 122, 122);
+  }
+</style>
 <script lang="ts">
 import { defineComponent } from 'vue';
 
