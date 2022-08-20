@@ -4,7 +4,7 @@
 
 <style lang="scss">
   .info-page-block{
-    margin-top: 30px;
+    margin-top: 300px;
     height: 30px;
     background: rgb(122, 122, 122);
   }
